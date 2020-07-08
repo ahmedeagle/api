@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba73c006-b2c0-456f-a6fb-1aa34b1f17e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cors.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckAdminToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckAdminToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -145,6 +142,7 @@
       <recent name="C:\wamp64\www\apitutorial\app\Http\Traits" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\apitutorial\app\Http\Controllers\Api" />
       <recent name="C:\wamp64\www\apitutorial\app" />
     </key>
   </component>
@@ -182,7 +180,7 @@
       <workItem from="1593429400614" duration="5192000" />
       <workItem from="1593458442524" duration="852000" />
       <workItem from="1593496900060" duration="434000" />
-      <workItem from="1594246483108" duration="1112000" />
+      <workItem from="1594246483108" duration="5005000" />
     </task>
     <servers />
   </component>
