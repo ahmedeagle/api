@@ -20,6 +20,7 @@
     RewriteRule ^ index.php [L]
 </IfModule>
 
+
 # Disable Directory listing
     Options -Indexes
     # block files which needs to be hidden // in here specify .example extension of the file
