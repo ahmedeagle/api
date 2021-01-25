@@ -54,7 +54,7 @@ return [
         'admin-api' => [
             'driver' => 'jwt',
             'provider' => 'admins',
-        ],
+        ]
 
     ],
 

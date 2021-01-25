@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\AssignGuard;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -66,6 +67,7 @@ class Kernel extends HttpKernel
 
         'checkPassword' => \App\Http\Middleware\CheckPassword::class,
         'changeLanguage' => \App\Http\Middleware\ChangeLanguage::class,
-        'checkAdminToken' => \App\Http\Middleware\CheckAdminToken::class,
+      //  'checkAdminToken' => \App\Http\Middleware\CheckAdminToken::class,
+        'auth.guard'  => AssignGuard::class
     ];
 }
