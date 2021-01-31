@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api\Admin;
+namespace App\Http\Controllers\Api\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
@@ -36,21 +36,19 @@ class AuthController extends Controller
 
             $credentials = $request->only(['email', 'password']);
 
-            $token = Auth::guard('admin-api')->attempt($credentials);
+            $token = Auth::guard('user-api')->attempt($credentials);  //generate token
 
             if (!$token)
                 return $this->returnError('E001', 'بيانات الدخول غير صحيحة');
 
-            $admin = Auth::guard('admin-api')->user();
-            $admin->api_token = $token;
+            $user = Auth::guard('user-api')->user();
+            $user ->api_token = $token;
             //return token
-            return $this->returnData('admin', $admin);
+            return $this->returnData('user', $user);  //return json response
 
         } catch (\Exception $ex) {
             return $this->returnError($ex->getCode(), $ex->getMessage());
         }
-
-
     }
 
     public function logout(Request $request)
