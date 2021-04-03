@@ -16,7 +16,7 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 */
 
 //all routes / api here must be api authenticated
-Route::group(['middleware' => ['api','checkPassword','changeLanguage'], 'namespace' => 'Api'], function () {
+Route::group(['middleware' => ['api'/*,'checkPassword',*/,'changeLanguage'], 'namespace' => 'Api'], function () {
     Route::post('get-main-categories', 'CategoriesController@index');
     Route::post('get-category-byId', 'CategoriesController@getCategoryById');
     Route::post('change-category-status', 'CategoriesController@changeStatus');
@@ -37,16 +37,12 @@ Route::group(['middleware' => ['api','checkPassword','changeLanguage'], 'namespa
 
     Route::group(['prefix' => 'user' ,'middleware' => 'auth.guard:user-api'],function (){
        Route::post('profile',function(){
-           return 'Only authenticated user can reach me';
+           return  \Auth::user(); // return authenticated user data
        }) ;
+
+
     });
 
-});
-
-Route::get('test',function (){
-
-     //convert token user
-    return JWTAuth::toUser('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hcGktdHV0b3JpYWwubG9jYWxcL2FwaVwvdjFcL3VzZXJcL2xvZ2luIiwiaWF0IjoxNjEyMTE5ODI3LCJleHAiOjE2MTIxMjM0MjcsIm5iZiI6MTYxMjExOTgyNywianRpIjoiSUhiU0xnbGw4dHdRR2xRMSIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.BOLGbwj8H3XHUqrzQa1SFmusmDJv7UDz3jTsfUPXo7g');
 });
 
 
